@@ -6,9 +6,7 @@ import "./Style.css";
 
 function App() {
   const [tenzies, setTenzies] = React.useState(false);
-
   const [dice, setDice] = React.useState(allNewDice());
-
   const diceElements = dice.map((die) => (
     <Die
       key={die.id}
@@ -67,7 +65,6 @@ function App() {
     },
     [dice]
   );
-
   return (
     <main>
       {tenzies && <Confetti />}
